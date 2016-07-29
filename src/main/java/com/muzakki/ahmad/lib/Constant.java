@@ -15,11 +15,11 @@ public class Constant {
 
     public static HashMap<String,String> getHeaders(){
         HashMap<String,String> headers = new HashMap<>();
-        headers.put("Authorization","9k758L079oyksTHwjgxtXOzIMq49h64EMiOG2z9");
+        headers.put("Authorization","PUT YOUR AUTH KEY HERE");
         return headers;
     }
 
-    public static final String HOST = "http://aldrivr.tk";
+    public static final String HOST = "YOUR HOST";
 
     public static final String URL_LOGIN = HOST+"/login";
 
@@ -34,15 +34,11 @@ public class Constant {
     public static final String DATABASE_NAME = "kordinasi.db";
     public static final String[] TABLES = new String[]{
             "create table user(id integer primary key,username text," +
-                    "nama text, tipe_user text)",
-            "create table event(id integer primary key, nama text, tanggal text," +
-                    "tempat text, guest_star text, foto text,created_by text)",
-            "create table job(id integer primary key, event integer,nama text, tugas text," +
-                    "komentar text,status text)"
+                    "nama text)"
     };
 
     public static void resetTable(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL("drop table job");
-        sqLiteDatabase.execSQL(TABLES[2]);
+        sqLiteDatabase.execSQL("drop table user");
+        sqLiteDatabase.execSQL(TABLES[0]);
     }
 }
