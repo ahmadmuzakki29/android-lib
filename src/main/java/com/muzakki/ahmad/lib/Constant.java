@@ -19,7 +19,7 @@ public class Constant {
         return headers;
     }
 
-    public static final String HOST = "YOUR HOST";
+    public static final String HOST = "my host HOST";
 
     public static final String URL_LOGIN = HOST+"/login";
 
