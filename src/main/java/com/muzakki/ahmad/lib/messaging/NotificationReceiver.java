@@ -1,4 +1,4 @@
-package com.muzakki.ahmad.lib.services;
+package com.muzakki.ahmad.lib.messaging;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;

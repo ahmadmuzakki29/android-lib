@@ -6,10 +6,10 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.muzakki.ahmad.lib.Helper;
-import com.muzakki.ahmad.lib.InternetConnection;
-import com.muzakki.ahmad.lib.services.PersistentConnection;
-import com.muzakki.ahmad.lib.Constant;
+import com.muzakki.ahmad.helper.Constant;
+import com.muzakki.ahmad.helper.Helper;
+import com.muzakki.ahmad.helper.InternetConnection;
+import com.muzakki.ahmad.helper.PersistentConnection;
 
 import org.json.JSONException;
 import org.json.JSONObject;
