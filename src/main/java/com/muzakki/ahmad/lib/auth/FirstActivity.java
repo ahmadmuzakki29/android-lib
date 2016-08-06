@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.muzakki.ahmad.lib.Helper;
+import com.muzakki.ahmad.helper.Helper;
 import com.muzakki.ahmad.lib.R;
 
 public abstract class FirstActivity extends Activity {

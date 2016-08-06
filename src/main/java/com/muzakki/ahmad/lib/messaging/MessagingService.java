@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.muzakki.ahmad.lib.services;
+package com.muzakki.ahmad.lib.messaging;
 
 import android.content.Intent;
 import android.util.Log;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-import com.muzakki.ahmad.lib.Helper;
+import com.muzakki.ahmad.helper.Helper;
 
 import java.util.Map;
 
