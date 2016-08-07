@@ -4,9 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.muzakki.ahmad.helper.Constant;
+import com.muzakki.ahmad.helper.Config;
 import com.muzakki.ahmad.helper.Helper;
 import com.muzakki.ahmad.helper.InternetConnection;
 import com.muzakki.ahmad.helper.PersistentConnection;
@@ -43,7 +44,12 @@ public class Auth{
         params.putString("username",username);
         params.putString("password",password);
         params.putString("instance_id",iid.getId());
-        new LoginIC(ctx).post(Constant.URL_LOGIN,params);
+        String url = Config.getString(ctx, "url_login");
+        if(url==null){
+            Toast.makeText(ctx,"url_login not mentioned in config.json",Toast.LENGTH_SHORT).show();
+            return;
+        }
+        new LoginIC(ctx).post(url,params);
     }
 
     private class LoginIC extends InternetConnection {
@@ -118,7 +124,7 @@ public class Auth{
 
         Intent in = new Intent(ctx, PersistentConnection.class);
         in.putExtra("method",InternetConnection.POST);
-        in.putExtra("url",Constant.URL_TOKEN);
+        in.putExtra("url",Config.getString(ctx,"url_token"));
         in.putExtra("params",params);
         ctx.startService(in);
     }
